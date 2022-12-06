@@ -1,0 +1,195 @@
+html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: 'Rubik', Verdana, arial, sans-serif;
+	font-size: 16px;
+	background: #eee;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.app {
+	display: flex;
+	min-height: 100vh;
+}
+
+.sidebar {
+	/* position: fixed; */
+	/* top: 0; */
+	/* left: 0; */
+	/* height: 100%; */
+	width: 300px;
+	background: #314052;
+	color: #fff;
+}
+
+.sidebar .sidebar-top {
+	margin: 0;
+	padding: 2em 30px 1em;
+}
+
+.sidebar h1 {
+	margin-bottom: 0;
+}
+
+.sidebar-top .site-description {
+	margin-top: 0;
+	font-size: 0.85em;
+	opacity: 0.6;
+	/* font-style: italic; */
+}
+
+.sidebar h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidebar .capro-logo {
+	opacity: 1;
+}
+
+.nav-header,
+nav a,
+.credits {
+	padding: 8px 30px;
+}
+
+.nav-header {
+	cursor: default;
+	padding-top: 3em;
+	color: rgba(255, 255, 255, 0.4);
+	letter-spacing: 0.1em;
+}
+
+nav a {
+	color: rgba(255, 255, 255, 0.9);
+	display: block;
+	text-decoration: none;
+}
+
+nav a.active {
+	background: rgba(0, 146, 255, 0.5) !important;
+}
+
+nav a:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.credits {
+	margin-top: 2em;
+	font-size: 0.7em;
+	opacity: 0.6;
+	letter-spacing: 0.10em;
+}
+
+
+
+main {
+	/* margin-left: 300px; */
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 40px;
+	padding-bottom: 100px;
+	width: 800px;
+	/* height: 100%; */
+	display: block;
+	background: #fff;
+	color: #333;
+}
+
+main p,
+main li {
+	line-height: 1.5em;
+}
+
+main h1 {
+	color: #444;
+	font-size: 2.4em;
+}
+
+main h2 {
+	font-size: 1.6em;
+	margin-top: 2.2em;
+}
+
+main h3 {
+	margin-top: 1.5em;
+	color: #444;
+}
+
+main a {
+	color: #ff6a00;
+	border-bottom: 1px dashed #314052;
+	text-decoration: none;
+}
+
+main a:hover {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+main > p > code,
+main li code,
+main em > code {
+	background-color: #eeeee9;
+	padding: 1px 3px;
+	border-radius: 3px;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 0.88em;
+
+}
+
+/* .sidebar { */
+	/* height: 100%; */
+/* } */
+
+
+@media only screen and (max-width: 1100px) {
+
+	.app {
+		position: relative;
+	}
+
+	.sidebar,
+	.sidebar .capro-logo {
+		transition-duration: 200ms;
+	}
+
+	.sidebar {
+		position: absolute;
+		height: 100%;
+		width: 80%;
+	}
+
+	.sidebar.closed {
+		width: 20px;
+	}
+
+	.sidebar.closed > * {
+		visibility: hidden;
+	}
+
+	.sidebar.closed .capro-logo {
+		/* width: 0; */
+		opacity: 0;
+	}
+
+	main {
+		width: 100%;
+		max-width: 100%;
+		padding-left: 34px;
+		padding-right: 14px;
+	}
+
+	pre code {
+		font-size: 0.8em;
+	}
+}

@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  web:
+    image: nginx:1.23.2
+    restart: unless-stopped
+    volumes:
+      - "./docker/nginx.conf:/etc/nginx/conf.d/default.conf"
+      - "./public:/app/public"
+    networks:
+      - web
+    environment:
+      - VIRTUAL_HOST=capro.xy2z.io
+      # - LETSENCRYPT_HOST=xy2z.io
+
+  build-apache:
+    build: .
+    volumes:
+      - "./:/app"
+
+networks:
+  web:
+    external: true
