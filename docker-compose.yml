@@ -11,9 +11,9 @@ services:
       - web
     environment:
       - VIRTUAL_HOST=capro.xy2z.io
-      # - LETSENCRYPT_HOST=xy2z.io
+      - LETSENCRYPT_HOST=capro.xy2z.io
 
-  build-apache:
+  builder:
     build: .
     volumes:
       - "./:/app"
