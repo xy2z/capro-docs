@@ -22,7 +22,7 @@ nav_sort: 200
 Install Capro globally
 
 ```console
-$ composer global require xy2z/capro
+$ composer global require xy2z/capro:@alpha
 ```
 
 Make sure your global composer binary dir is in your PATH, then you will be able to run `capro` as a shortcut for `vendor/bin/capro`.

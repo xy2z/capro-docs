@@ -24,12 +24,12 @@ Minor upgrades should not contain any breaking changes.
 <!-- How to upgrade your global "capro" -- and how to upgrade your site. -->
 Upgrade your global capro package, if you have installed Capro installed globally via Composer (recommended).
 ```console
-$ composer global update xy2z/capro
+$ composer global update xy2z/capro:@alpha
 ```
 
 Upgrade your local project package:
 ```console
-$ composer update xy2z/capro
+$ composer update xy2z/capro:@alpha
 ```
 
 @endmarkdown

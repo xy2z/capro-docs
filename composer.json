@@ -8,9 +8,6 @@
             "email": "xy2z@pm.me"
         }
     ],
-    "repositories": [
-        {"type": "composer", "url": "https://xy2z.repo.repman.io"}
-    ],
     "require": {
         "xy2z/capro": "1.*@alpha",
         "guzzlehttp/guzzle": "^7.5"
