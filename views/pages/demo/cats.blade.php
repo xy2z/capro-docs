@@ -2,9 +2,8 @@
 
 <h2>List of cats:</h2>
 
-@foreach (Capro::cats()->get() as $view)
-	&bull; <a href="{{ $view->href }}">{{ $view->id }}</a><br>
-
+@foreach (Capro::cats()->orderBy('id')->get() as $view)
+	&bull; <a href="{{ $view->href }}">{{ $view->href }}</a><br>
 
 	{{-- <img src="https://cataas.com/cat/{{ $view->id }}">
 	<br><br> --}}

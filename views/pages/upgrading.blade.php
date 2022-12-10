@@ -11,7 +11,7 @@ nav_sort: 600
 
 # Upgrading Capro
 
-You can keep track of new Capro releases on <a href="https://github.com/xy2z/capro/releases" target="_blank">GitHub Releases</a>. If you are using a RSS reader, you can add the GitHub Releases URL to get notified when a new release is out.
+You can keep track of new Capro releases on <a href="https://github.com/xy2z/capro/releases" target="_blank">GitHub Releases</a>. If you are using an RSS reader, you can add the GitHub Releases URL to get notified when a new release is out.
 
 
 Capro follows <a href="https://semver.org/" target="_blank">Semantic Versioning</a>.

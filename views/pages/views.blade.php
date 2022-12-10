@@ -11,17 +11,17 @@ nav_sort: 400
 
 # Views
 
-Views are what will be build into static HTML files. Capro uses the Blade template engine, known from Laravel.
+Views are files that will be build into static HTML files. Capro uses the Blade template engine, known from Laravel.
 
 
 ## Directories
 In the `views` directory, there's three reserved subdirectory names:
 
-- **Pages** (`views/pages/`) - for "regular" pages. E.g. `views/pages/about.blade.php` will be build to `domain.tld/about/`.
+- **Pages** (`views/pages/`) - for "regular" pages. E.g. `views/pages/about.blade.php` will be built to `domain.tld/about/`.
 - **Collections** (`views/collections/`) - for static blade collections, e.g. blog post, news, etc. Where each collection view is a `*.blade.php` file.
-- **Template Views** (`views/templates`) - can be used to build data objects into pages, using a specific template. E.g. json data from an API. See [Template Views](/template-views).
+- **View Templates** (`views/templates`) - can be used to build data objects into pages, using a specific template. E.g. json data from an API. See [View Templates](/view-templates).
 
-By default all pages and collections are build to the public directory, unless the `core.disable_build: true` is set in the YAML Front Matter of the view.
+By default all pages and collections are built to the public directory, unless the `core.disable_build: true` is set in the YAML Front Matter of the view.
 
 Other than that, you are free to create the directories you need.
 
@@ -60,16 +60,16 @@ title: "About Me"
 @@endsection
 ```
 
-The page will be build to `public/about/index.html` and can be linked to just as `domain.tld/about/`
+The page will be built to `public/about/index.html` and can be linked to just as `domain.tld/about/`
 
 When using `@@extend()` and `@@include()` the root directory will be set to `views/`, so if you want to get a view from an include folder, e.g. `views/layouts.matser.blade.php` you can refer to it as `'layouts.master'`.
 
 
 
 ## Collections
-Collections is a great way to group views, the best example is probably for blog posts. If we were to make blog posts as pages, they would not be grouped together, and it will be harder to show related blog posts, generate RSS feeds, list blog posts, etc.
+Collections are a great way to group views, the best example is probably for blog posts. If we were to make blog posts as pages, they would not be grouped together, and it will be harder to show related blog posts, generate RSS feeds, list blog posts, etc.
 
-Collections doesn't need any configuration to work, all you need to do is create a view. Let's create a new `views/collections/blog/hello-world.blade.php` in the `blog` collection.
+Collections don't need any configuration to work; all you need to do is create a view. Let's create a new `views/collections/blog/hello-world.blade.php` in the `blog` collection.
 
 ```blade
 {{ '--' . '-' }}
@@ -83,14 +83,14 @@ title: "Hello World!"
 @@endsection
 ```
 
-If you want to create collections with data from an API, you can use [Template Views](/template-views).
+If you want to create collections with data from an API, you can use [View Templates](/view-templates).
 
 
 ## Difference Between a Page and a Collection?
 
 As you can see, pages and collections look very alike. So what is the difference exactly?
 
-The main difference is the URL, a collection will always have the collection name added to the URL.
+The main difference is the URL; a collection will always have the collection name added to the URL.
 
 - A page view `views/pages/contact.blade.php` will be available at `domain.ltd/contact/`.
 - A blog collection view `views/collections/posts/2023-01-01-hello-world.blade.php` will be available at `domain.tld/posts/2023-01-01-hello-world/`.

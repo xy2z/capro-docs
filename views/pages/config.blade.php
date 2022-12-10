@@ -80,10 +80,10 @@ If you need to `var_dump()` the variables to see the types of the values, you ca
 
 ## The Core Configuration File
 
-The file `config/core.php` should be reserved for the Capro configuration. It can be used to change directory names and add template views.
+The file `config/core.php` should be reserved for the Capro configuration. It can be used to change directory names and add view-templates.
 
 If you want to change the directory names, e.g. if you want to save the build to a directory called "build" instead of "public",
-you can do so by changing `config/core.php` file and set the value to "build".
+you can do so by changing `config/core.php` file as seen below.
 
 - `public_dir` (default: `'public'`)
 - `views_dir` (default: `'views'`)

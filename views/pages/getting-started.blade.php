@@ -110,9 +110,9 @@ Example of `views/layouts/layout.blade.php`
 
 ### 3. Add Pages
 
-Any view you add in the `views/pages` directory, will automatically be build to a page. If you make a view called `views/pages/about.blade.php`, the page will be available at `http://localhost:82/about` after build.
+Any view you add in the `views/pages` directory, will automatically be built to a page. If you make a view called `views/pages/about.blade.php`, the page will be available at `http://localhost:82/about` after build.
 
-At the top of each view, you can add a YAML Front Matter, which will turn into variables that are accessible to the view, the layout, and also the Capro class for filtering collections.
+At the top of each view, you can add an YAML Front Matter, which will turn into variables that are accessible to the view, the layout, and also the Capro class for filtering collections.
 
 Example of `/views/pages/about.blade.php`
 ```blade
@@ -133,7 +133,7 @@ The `title` we set in the about page's YAML Front Matter is also be used in the 
 
 
 ### 4. Build
-Build Capro using and run a PHP serve
+Build Capro using and run a PHP serve.
 ```
 capro build
 cd public
@@ -150,13 +150,13 @@ The cache directory is used to cache your views to make building faster. It is n
 
 ### Config Directory
 
-The config directory automatically loads all files in the directory, and makes all variables accessible via the `config()` function. [Read more about Configuration](/config)
+The config directory automatically loads all files in the directory and makes all variables accessible via the `config()` function. [Read more about Configuration](/config).
 
 
 ### Public Directory
-The public directory is used to store all build files, so this is the directory you want your webserver to point to. On every all files in the directory is deleted, and everything is rebuild again.
+The public directory is used to store all static HTML files, this is the directory you want your webserver to point to. On each build, all files in the directory is deleted, and all files will be generated again.
 
-If you have files you want to add static files here, you should add them in the "static" directory.
+If you want to add files (non-views) to the public directory, you can add them to the "static" directory.
 
 
 ### Static Directory
@@ -166,7 +166,7 @@ The `static` directory is where you want to store files like images, icons, vide
 All content in the static directory will be copied to the public directory on every build. The public directory is emptied beforehand.
 
 ### Views Directory
-This is where you store all your views, pages are stored in `views/pages` and collections (e.g. blog posts, news, etc.) can be stored in `views/collections`. [Read more about views](/views).
+This is where you store all your views. Pages are stored in `views/pages` and collections (e.g. blog posts, news, etc.) can be stored in `views/collections`. [Read more about views](/views).
 
 
 

@@ -22,7 +22,7 @@ function get_cats(int $limit = 10) {
 
 return [
 
-	// Template Views (demo)
+	// ViewTemplate (demo)
 	'templates' => [
 
 		// Cats
