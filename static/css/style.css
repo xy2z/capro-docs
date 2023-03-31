@@ -139,12 +139,20 @@ main a:hover {
 main > p > code,
 main li code,
 main em > code {
-	background-color: #eeeee9;
+	background-color: #e9e9d8;
 	padding: 1px 3px;
 	border-radius: 3px;
 	font-family: 'Source Code Pro', monospace;
-	font-size: 0.88em;
+	font-size: 0.85em;
+	color: rgba(0, 0, 0, 0.8);
 
+	/* background-color: #1d1f21; */
+	/* color: #c5c8c6; */
+}
+
+.hljs span::selection,
+.hljs::selection {
+    background: #697991 !important;
 }
 
 /* .sidebar { */

@@ -51,10 +51,10 @@ return [
 
 		// Cats
 		new ViewTemplate(
-			'cats', // label.
-			'cat_template', // template_view. File: `views/templates/cat_template.blade.php`
-			'/demo/cats/{id}', // result_path. The final URL for each item.
-			get_cats(5), // items.
+			label: 'cats',
+			template_view: 'cat_template', // Points to: `views/templates/cat_template.blade.php`
+			result_path: '/demo/cats/{id}',
+			items: get_cats(5),
 		),
 	],
 
@@ -65,7 +65,7 @@ Since this ViewTemplate consists of 5 items (cats) it will generate 5 pages each
 
 ## Make a View Template
 
-Now we need to make a template that all the items will use.
+Now we need to make a template that each of the item will use.
 
 Create a new file: `views/templates/cat_template.blade.php`
 

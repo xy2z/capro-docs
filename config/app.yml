@@ -1,7 +1,7 @@
 domain: capro.xy2z.io
 url: https://capro.xy2z.io
 locale: en_US
-version: 1.10 # used to bump assets versions to clear caching.
+version: 1.11 # used to bump assets versions to clear caching.
 
 links:
   github:

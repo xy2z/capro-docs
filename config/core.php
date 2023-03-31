@@ -2,21 +2,23 @@
 
 use xy2z\Capro\ViewTemplate;
 
-function get_cats(int $limit = 10) {
-	$client = new \GuzzleHttp\Client();
-	$response = $client->request('GET', 'https://cataas.com/api/cats?skip=0&limit=' . $limit);
-	$json = json_decode($response->getBody(), false);
+if (!function_exists('get_cats')) {
+	function get_cats(int $limit = 10) {
+		$client = new \GuzzleHttp\Client();
+		$response = $client->request('GET', 'https://cataas.com/api/cats?skip=0&limit=' . $limit);
+		$json = json_decode($response->getBody(), false);
 
-	$result = [];
+		$result = [];
 
-	foreach ($json as $cat) {
-		$result[] = [
-			'id' => $cat->_id,
-			'tags' => $cat->tags,
-		];
+		foreach ($json as $cat) {
+			$result[] = [
+				'id' => $cat->_id,
+				'tags' => $cat->tags,
+			];
+		}
+
+		return $result;
 	}
-
-	return $result;
 }
 
 
@@ -27,10 +29,10 @@ return [
 
 		// Cats
 		new ViewTemplate(
-			'cats', // label.
-			'cat_template', // template_view.
-			'/demo/cats/{id}', // result_path.
-			get_cats(5), // items.
+			label: 'cats',
+			template_view: 'cat_template', // Points to: `views/templates/cat_template.blade.php`
+			result_path: '/demo/cats/{id}',
+			items: get_cats(5),
 		),
 	],
 

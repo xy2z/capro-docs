@@ -61,9 +61,16 @@ _Tip: `capro b` is an alias for "capro build"_.
 
 
 ### Serve Command
-A "serve" command that automatically builds on each code change is currently under development.
 
-For now you can setup your editor/IDE to automatically run `capro build` on each file save. For VS Code you can use [this plugin](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave).
+While developing, you can use the `serve` command to serve your site to your browser while watching for changes. It will automatically rebuild your site on every file modification, deletion or addition of new files, so you don't have to worry about running `capro build` manually.
+
+Usage:
+```console
+$ vendor/bin/capro serve
+» Capro development server started at http://127.0.0.1:82
+```
+
+*It is recommended to use `vendor/bin/capro serve` instead of `capro serve`, because of bugs we are working on during the alpha stage.<br>If you have problems with the serve command, please create a github issue with all relevant details. As an alternative you can setup your editor/IDE to automatically run `capro build` on each file save. For VS Code you can use [this plugin](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave).*
 
 
 ## Start Creating
@@ -75,8 +82,7 @@ Edit the `config/app.yml` file to match your new project.
 Example:
 ```yml
 title: MyBlog
-headline: Welcome to MyBlog
-domain: myblog.example.com
+headline: Welcome to MyBlog!
 url: https://myblog.example.com
 email: info@myblog.example.com
 ```
@@ -140,6 +146,8 @@ cd public
 php -S localhost:82
 ```
 Now you should be able to see your new About page using the Layout view at <a href="http://localhost:82/about" target="_blank">http://localhost:82/about</a>
+
+Remember that you have to run `capro build` on every file change, therefore it is recommended to use `vendor/bin/capro serve` instead.
 
 
 ## Capro Directories

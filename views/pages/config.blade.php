@@ -98,9 +98,19 @@ return [
 ];
 ```
 
+### Serve Config
+If you want to change the configuration used for the `capro serve` command, you can set the following core config:
+```php
+{!! '<' . '?php' !!}
+return [
+	'serve_host' => '127.0.0.1',
+	'serve_port' => 8000,
+];
+```
+
+
 @endmarkdown
 
 
 @endsection
-
 
