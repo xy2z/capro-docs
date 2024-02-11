@@ -2,6 +2,7 @@
 /vendor/
 /views/__tmp.blade.php
 /cache/
+/views/cache/
 /public/
 .capro-cache*
 

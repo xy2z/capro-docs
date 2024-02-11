@@ -3,6 +3,8 @@ url: https://capro.xy2z.io
 locale: en_US
 version: 1.11 # used to bump assets versions to clear caching.
 
+min_php_version: 'PHP 8.0+'
+
 links:
   github:
     title: GitHub
@@ -11,3 +13,7 @@ links:
   community:
     title: Community
     url: 'https://github.com/xy2z/capro/discussions'
+
+  datsi:
+    title: Datsi (sponsor)
+    url: 'https://datsi.app'

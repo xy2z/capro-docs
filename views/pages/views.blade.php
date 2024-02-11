@@ -93,7 +93,7 @@ As you can see, pages and collections look very alike. So what is the difference
 The main difference is the URL; a collection will always have the collection name added to the URL.
 
 - A page view `views/pages/contact.blade.php` will be available at `domain.ltd/contact/`.
-- A blog collection view `views/collections/posts/2023-01-01-hello-world.blade.php` will be available at `domain.tld/posts/2023-01-01-hello-world/`.
+- A blog collection view `views/collections/posts/2024-01-01-hello-world.blade.php` will be available at `domain.tld/posts/2024-01-01-hello-world/`.
 
 In the Capro class pages have their own "group", and each collection will be in their own group. To get all pages call `Capro::pages()->get()`, and to get all views from a "posts" collection call `Capro::posts()->get()`
 

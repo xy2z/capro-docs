@@ -52,7 +52,7 @@
 				</nav>
 
 				{{-- External Links (from `config/app.yml`) --}}
-				<div class="nav-header">LINKS</div>
+				<div class="nav-header external-links">LINKS</div>
 				<nav>
 					@foreach (Config::get('app.links') as $link)
 						<a href="{{ $link['url'] }}" target="_blank">{{ $link['title'] }} <i class="fa-solid fa-up-right-from-square"></i></a>

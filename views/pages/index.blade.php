@@ -20,6 +20,8 @@ Capro is a static-site generator made in PHP, using the Blade template engine. S
 **NOTICE:** Capro is currently in alpha phase and has not been thoroughly tested for production usage. Also, this documentation is a work in progress. If you have any questions, feel free to ask in our <a target="_blank" href="{{ config('app.links.community.url') }}">Community</a> section on GitHub.
 
 
+
+
 <!-- TODO: Make sure your Composer global bin is added to your PATH. -->
 ## Features
 - Blade template engine (known from Laravel)

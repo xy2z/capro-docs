@@ -19,17 +19,17 @@ Capro follows <a href="https://semver.org/" target="_blank">Semantic Versioning<
 
 ## Minor Upgrade
 
-Minor upgrades should not contain any breaking changes.
+Minor upgrades should not contain any breaking changes (except for alpha).
 
 <!-- How to upgrade your global "capro" -- and how to upgrade your site. -->
 Upgrade your global capro package, if you have installed Capro installed globally via Composer (recommended).
 ```console
-$ composer global update xy2z/capro:@alpha
+$ composer global update xy2z/capro
 ```
 
 Upgrade your local project package:
 ```console
-$ composer update xy2z/capro:@alpha
+$ composer update xy2z/capro
 ```
 
 @endmarkdown

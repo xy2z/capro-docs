@@ -13,22 +13,22 @@ nav_sort: 200
 
 
 ## Requirements
-- PHP 7.4+
-- Composer (installed in your path)
+- {{ config('app.min_php_version') }}
+- Composer
 
 
-## Install
+## Install using Composer Global
 
-Install Capro globally
+Capro is released as a scoped phar file, so it should not contain any dependency problems.
 
 ```console
 $ composer global require xy2z/capro:@alpha
 ```
 
-Make sure your global composer binary dir is in your PATH, then you will be able to run `capro` as a shortcut for `vendor/bin/capro`.
+Make sure your global composer binary directory is in your PATH, to be able to run the `capro` command anywhere.
 
 
-## Create your new site
+### Create your new site
 
 To create a new capro project directory, run:
 
@@ -86,6 +86,8 @@ headline: Welcome to MyBlog!
 url: https://myblog.example.com
 email: info@myblog.example.com
 ```
+
+*This is just an example, you can add only the fields you need, or even none at all.*
 
 ### 2. Create a Layout
 
@@ -152,10 +154,6 @@ Remember that you have to run `capro build` on every file change, therefore it i
 
 ## Capro Directories
 
-### Cache Directory
-The cache directory is used to cache your views to make building faster. It is not recommended to include this directory in your git repository.
-
-
 ### Config Directory
 
 The config directory automatically loads all files in the directory and makes all variables accessible via the `config()` function. [Read more about Configuration](/config).
@@ -175,6 +173,9 @@ All content in the static directory will be copied to the public directory on ev
 
 ### Views Directory
 This is where you store all your views. Pages are stored in `views/pages` and collections (e.g. blog posts, news, etc.) can be stored in `views/collections`. [Read more about views](/views).
+
+### Views Cache Directory
+The `views/cache` directory is used to cache your views to make building faster. It is not recommended to include this directory in your git repository.
 
 
 

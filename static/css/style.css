@@ -75,6 +75,11 @@ nav a {
 	text-decoration: none;
 }
 
+nav a > i {
+	padding-left: 4px;
+	opacity: 0.5;
+}
+
 nav a.active {
 	background: rgba(0, 146, 255, 0.5) !important;
 }
@@ -129,6 +134,11 @@ main a {
 	color: #ff6a00;
 	border-bottom: 1px dashed #314052;
 	text-decoration: none;
+}
+
+main a.no-border,
+main a.no-border:hover {
+	border: 0;
 }
 
 main a:hover {

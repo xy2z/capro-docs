@@ -1,11 +1,25 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 use xy2z\Capro\ViewTemplate;
 
 if (!function_exists('get_cats')) {
 	function get_cats(int $limit = 10) {
 		$client = new \GuzzleHttp\Client();
-		$response = $client->request('GET', 'https://cataas.com/api/cats?skip=0&limit=' . $limit);
+		try {
+			$response = $client->request('GET', 'https://cataas.com/api/cats?skip=0&limit=' . $limit);
+		} catch (\Exception $e) {
+			echo 'Cat API site is down :( ';
+			return [
+				[
+					'id' => '404',
+					'tags' => 'down',
+				],
+			];
+			// exit;
+			// exit('cat site is down :(');
+		}
 		$json = json_decode($response->getBody(), false);
 
 		$result = [];
