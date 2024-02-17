@@ -1,7 +1,5 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-
 use xy2z\Capro\ViewTemplate;
 
 if (!function_exists('get_cats')) {
