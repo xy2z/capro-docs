@@ -39,3 +39,4 @@ Capro is a static-site generator made in PHP, using the Blade template engine. S
 
 @endmarkdown
 @endsection
+
