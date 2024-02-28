@@ -13,7 +13,7 @@ nav_sort: 100
 
 Welcome to the documentation for Capro version 1.x. Capro follows [semantic versioning](https://semver.org/).
 
-Capro is a static-site generator made in PHP, using the Blade template engine. See more features below.
+Capro is a static-site generator made in PHP, using the Blade template engine.
 
 
 ## <i class="fa-solid fa-triangle-exclamation"></i> Alpha
@@ -39,3 +39,4 @@ Capro is a static-site generator made in PHP, using the Blade template engine. S
 
 @endmarkdown
 @endsection
+

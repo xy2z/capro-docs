@@ -72,6 +72,29 @@
 				@yield('content')
 
 
+				{{-- Next/prev pages --}}
+				<div class="pagination">
+					{{-- Prev Page --}}
+					@php ($prev_page = Capro::pages()->where('in_nav', true)->orderBy('nav_sort')->whereBetween('nav_sort', 0, $self->nav_sort-1)->last())
+					@if ($prev_page)
+						<a href="{{ $prev_page->href }}">
+							<i class="fa-solid fa-chevron-left"></i>
+							{{ $prev_page->title }}
+						</a>
+					@endif
+
+					{{-- Next Page --}}
+					@php ($next_page = Capro::pages()->where('in_nav', true)->orderBy('nav_sort')->whereBetween('nav_sort', $self->nav_sort+1, PHP_INT_MAX)->first())
+					@if ($next_page)
+						<a href="{{ $next_page->href }}" class="_right">
+							{{ $next_page->title }}
+							<i class="fa-solid fa-chevron-right"></i>
+						</a>
+					@endif
+				</div>
+
+
+
 				{{-- TODO: Show Next/Prev buttons --}}
 				{{-- @if (isset($nav_sort))
 					nav_sort: {{ $nav_sort }}
