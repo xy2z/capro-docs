@@ -1,7 +1,7 @@
 domain: capro.xy2z.io
 url: https://capro.xy2z.io
 locale: en_US
-version: 1.12 # used to bump assets versions to clear caching.
+version: 1.13 # used to bump assets versions to clear caching.
 
 min_php_version: 'PHP 8.0+'
 
