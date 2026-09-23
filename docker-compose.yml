@@ -10,8 +10,8 @@ services:
     networks:
       - web
     environment:
-      - VIRTUAL_HOST=capro.xy2z.io
-      - LETSENCRYPT_HOST=capro.xy2z.io
+      - VIRTUAL_HOST=capro.xy2z.dev
+      - LETSENCRYPT_HOST=capro.xy2z.dev
 
   builder:
     build: .
